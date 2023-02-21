@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>REGISTRATION FORM</legend>
+
+
+        <table>
+
+            <form action="">
+                <tr>
+                    <td>
+                        <label for="u-name">Username: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="u-name" id="u-name" onkeyup="valid_uname()"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+
+                        <span id="error-u"></span><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass1">Password: </label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass1" id="pass1" onkeyup="valid_pass1()"><br>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+
+                        <span id="error-pass"></span><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <label for="pass2">Confirm Password: </label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass2" id="pass2" onkeyup="valid_pass2()"><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span id="error-pass2"></span><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email: </label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email" onkeyup="valid_email()"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+
+                        <span id="error-e"></span><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <label for="pan">Pan Card: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="pan" id="pan" onkeyup="valid_pan()"><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span id="error-pan"></span><br>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <label for="aadhar">Aadhar: </label>
+                    </td>
+                    <td>
+
+                        <input type="text" name="aadhar" id="aadhar" onkeyup="valid_aadhar()"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+
+                        <span id="error-aadhar"></span><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="phone">Phone: </label>
+
+                    </td>
+                    <td>
+                        <input type="text" name="phone" id="phone" onkeyup="valid_phone()"><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span id="error-phone"></span><br>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="gender">Gender:</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span id="error-gender"></span><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" name="agree" id="agree">
+                        <label for="agree">Click if you agree to the Terms and Conditions!</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span id="error-gender"></span><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="SUBMIT" onclick="validate()">
+
+                    </td>
+                </tr>
+            </form>
+            <tr>
+                <td colspan="2">
+
+                    <span id="output"></span>
+                </td>
+            </tr>
+        </table>
+
+    </fieldset>
+</body>
+
+</html>

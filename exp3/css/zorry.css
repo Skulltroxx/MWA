@@ -1,0 +1,101 @@
+body{
+    background-color: khaki;
+    font-family: sans-serif;
+}
+
+header h1{
+    width: 70%;
+    display: inline-block;
+}
+
+header nav{
+    display: inline-block;
+    width: 25%;
+}
+
+header nav a{
+    margin: auto 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.head-img{
+    height: 200px;
+    margin-top: 2px;
+    background-image:url("../images/landscape.jpg");
+    background-attachment: fixed;
+    background-position-y: center;
+    border-radius: 5px;
+}
+
+.head-img-text{
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 14px;
+}
+
+.head-img-text > p{
+    display: inline-block;
+    font: 20px serif;
+    color: white;
+}
+
+.head-img-text > aside{
+    padding: 3px;
+    border-radius: 3px;
+    display: inline;
+    background-color: red;
+    color: black;
+    margin-left: 20%;
+}
+
+.main-body{
+    width: 70%;
+    display: inline-block;
+    padding: 5px;
+}
+
+.about-author{
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    background-color: rgb(56, 59, 61);
+    border-radius: 10px;
+    color: white;
+    height: 320px;
+    padding: 10px;
+}
+
+.about-author img{
+    margin-left: 5%;
+    width: 200px;
+    height: 140px;
+}
+
+.last-tweet{
+    width: 30%;
+    float: left;
+    /* border: 1px solid; */
+}
+
+.pictures{
+    margin-left: 5%;
+    float: left;
+    width: 30%;
+    /* border: 1px solid; */
+}
+
+.friends{
+    float: right;
+    width: 30%;
+    /* border: 1px solid; */
+}
+
+.pictures img{
+    border: 3px solid;
+    width: 75px;
+    height: auto;
+}
+
+.friends ul{
+    display: inline-block;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT 4</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Experiment 4</h1>
+    <hr>
+
+    <h2>Area of Triangle(Q1):</h2>
+    <form action="">
+        Number 1: <input type="number" name="side" id="side1"><br>
+        Number 2: <input type="number" name="side" id="side2"><br>
+        Number 3: <input type="number" name="side" id="side3"><br>
+        Area of Triangle: <output id="triangle-area"></output><br>
+        <input type="button" onclick="triangle()" value="Get Area">
+    </form>
+    <hr>
+
+    <h2>Sum of Two Integers(Q2):</h2>
+    <form action="">
+        Number 1: <input type="number" name="int" id="int1"><br>
+        Number 2: <input type="number" name="int" id="int2"><br>
+        Sum: <output id="sum-of-int"></output><br>
+        <input type="button" value="Get Sum" onclick="sum_of_int()">
+    </form>
+    <hr>
+
+    <h2>Reverse a Number(Q3):</h2>
+    <form action="">
+        Number = <input type="number" name="number" id="rev-number"><br>
+        Reverse: <output id="reverse-num"></output><br>
+        <input type="button" value="Reverse it!" onclick="reverse()">
+    </form>
+    <hr>
+
+    <h2>UpperCamelCase(Q4):</h2>
+    <form action="">
+        Textbox:<input type="text" id="upper" rows="30" placeholder="Type text!"></input><br>
+        Output: <output id="upper-camel"></output><br>
+        <input type="button" value="Camel it!" onclick="camel()">
+    </form>
+    <hr>
+
+    <h2>Greatest of Five(Q5):</h2>
+    <form action="">
+        Number 1: <input type="number" name="great" id="num1"><br>
+        Number 2: <input type="number" name="great" id="num2"><br>
+        Number 3: <input type="number" name="great" id="num3"><br>
+        Number 4: <input type="number" name="great" id="num4"><br>
+        Number 5: <input type="number" name="great" id="num5"><br>
+        Greatest of the five: <output id="greatest-five"></output><br>
+        <input type="button" value="Give greatest" onclick="greatest()">
+    </form>
+    <hr>
+
+    <h2>Grade Calculate(Q6):</h2>
+    <form action="">
+        Mark 1: <input type="number" name="mark" id="mark1"><br><br>
+        <!-- Mark 2: <input type="number" name="mark" id="mark2"><br>
+        Mark 3: <input type="number" name="mark" id="mark3"><br>
+        Mark 4: <input type="number" name="mark" id="mark4"><br>
+        Mark 5: <input type="number" name="mark" id="mark5"><br> -->
+        <input type="button" value="Get grades" onclick="grade()">
+        <br>
+        <h4>Grades:</h4>
+        Grade 1: <output id="g1"></output><br>
+        <!-- Grade 2: <output id="g2"></output><br>
+        Grade 3: <output id="g3"></output><br>
+        Grade 4: <output id="g4"></output><br>
+        Grade 5: <output id="g5"></output><br> -->
+    </form>
+
+    <h2>Pattern(Q7):</h2>
+    <form action="">
+        <output id="pattern-out"></output><br>
+        <input type="button" value="Generate pattern" onclick="gen_pattern()"><br>
+    </form>
+    <hr>
+</body>
+
+</html>

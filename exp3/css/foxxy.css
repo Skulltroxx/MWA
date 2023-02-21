@@ -1,0 +1,32 @@
+body{
+    background-color: khaki;
+    font-family: 'Lucida Sans Regular', sans-serif;
+}
+
+main{
+    border-radius: 4px;
+    padding: 2px 15px;
+    background-color: rgb(255, 250, 203);
+    width: 75%;
+    margin: 2px auto;
+}
+
+nav{
+    display: block;
+    float: right;
+}
+
+img{
+    border: 1vh dashed orange;
+}
+
+.text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1vh dashed orange;
+    padding: 0px 20px;
+    background-color: yellow;
+    max-width: 35%;
+    height: 250px;
+    overflow-y: scroll;
+}
