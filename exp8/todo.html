@@ -9,21 +9,26 @@
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
     <h1>Todo List</h1>
-    <form ng-form="add()">
-
-    </form>
+    
     <input type="text" name="todo" id="todo" ng-model="todo">
     <button ng-click="addTodo()">Enter</button>
 
-    <div ng-repeat="l in listal">
-        <p>{{l}}</p><br>
-    </div>
+    <ol>
+        <li ng-repeat="item in items">{{item}} <button ng-click="delete(item)">x</button></li>
+    </ol>
+
     <script>
         angular.module('myApp', []).controller('myCtrl', function($scope){
-            $scope.listal = []
+            $scope.items = []
+            id = 0
 
             $scope.addTodo = function(){
-                $cope.listal.push($scope.todo);
+                $scope.items.push($scope.todo);
+            }
+
+            $scope.delete = function(item){
+                i = $scope.items.indexOf(item);
+                $scope.items.splice(i,1);
             }
         })
     </script>
