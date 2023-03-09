@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+
+    <h1>Shopping Cart</h1><br>
+    <img src="https://www.pngplay.com/wp-content/uploads/7/Android-Mobile-Download-Free-PNG.png" alt="Mobile" height="100px">
+    <input type="number" name="mob" id="mob" ng-model="mob"><hr>
+
+    <img src="https://www.pngarts.com/files/5/IPad-PNG-Free-Download.png" alt="Tablet" height="100px">
+    <input type="number" name="tab" id="tab" ng-model="tab"><hr>
+
+    <img src="https://www.freepnglogos.com/uploads/laptop-png/laptop-transparent-png-pictures-icons-and-png-40.png" alt="Laptop" height="100px">
+    <input type="number" name="lap" id="lap" ng-model="lap"><hr>
+
+    Total = {{ total() }}
+
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', function($scope){
+            $scope.total = function(){
+                total_price = ((parseInt($scope.mob) || 0)*35000) + ((parseInt($scope.tab) || 0)*25000) + ((parseInt($scope.lap) || 0)*60000)
+
+                return total_price;
+            }
+        })
+    </script>
+</body>
+</html>

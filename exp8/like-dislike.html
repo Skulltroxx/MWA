@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes - Dislikes</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <h1>Like/Dislike Counter</h1>
+
+    <table border="1px">
+        <tr>
+            <th>Techonology</th>
+            <th>Likes</th>
+            <th>Dislikes</th>
+        </tr>
+        <tr ng-repeat="t in tech" style="text-align: center;">
+            <td>
+                <img height="150px" alt="Techonology" ng-src="{{t.href}}">
+            </td>
+            <td>{{t.likes}}</td>
+            <td>{{t.dislikes}}</td>
+
+            <td><button ng-click="incrementLike(t)">Like</button></td>
+            <td><button ng-click="incrementDislike(t)">Dislike</button></td>
+        </tr>
+    </table>
+    <script>
+        angular.module('myApp', []).controller('myCtrl', function($scope) {
+            $scope.tech = [
+                {"href": 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png?20170517184425', likes: 0, dislikes: 0},
+                {"href": 'https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-css-logo-png-transparent-svg-vector-bie-supply-9.png', likes: 0, dislikes: 0},
+                {"href": 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', likes: 0, dislikes: 0},
+                {"href": 'https://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png', likes: 0, dislikes: 0},
+            ]
+
+            $scope.incrementLike = function(tech){
+                tech.likes++;
+            }
+
+            $scope.incrementDislike = function(tech){
+                tech.dislikes++;
+            }
+        })
+    </script>
+</body>
+</html>

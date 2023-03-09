@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container rounded-bottom bg-dark mx-auto p-5 text-light">
+
+        <div class="row">
+            <div class="col-3">
+                <h1>Billy Bats</h1>
+                <img src="images/bat.png" class="rounded float-end" alt="" width="30" height="24">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim harum architecto eaque, veritatis,
+                perspiciatis soluta repellat necessitatibus accusantium repellendus ratione adipisci sequi. Itaque saepe
+                beatae, delectus expedita sint nisi quaerat.
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <button type="button" class="btn btn-outline-light mt-4">Learn more >></button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- middle carousel -->
+    <div id="carouselExampleControls" class="carousel w-50 h-50 mx-auto mt-4 slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/christian.jpg" class="d-block rounded-3 w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/knight.jpg" class="d-block rounded-3 w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/arkham.jpg" class="d-block rounded-3 w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Three columns text  -->
+    <div class="container mt-5 rounded">
+        <div class="row">
+            <div class="col-4">
+                <h2>Getting Started</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit doloribus quaerat, blanditiis
+                    reiciendis adipisci ut temporibus veritatis deserunt delectus libero reprehenderit? Placeat sint
+                    aperiam nobis neque quod eius est, corrupti reprehenderit aliquid quidem. Accusamus suscipit
+                    reiciendis perspiciatis sit quos nesciunt! Modi unde excepturi rerum molestiae ipsam iste quia,
+                    debitis in.
+                </p>
+                <div class="row">
+                    <div class="col-5">
+                        <button type="button" class="btn btn-light btn-outline-dark btn-sm">Learn more>></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h2>
+                    Get more libraries
+                </h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio fugiat alias maxime vel voluptatibus
+                    incidunt quidem placeat neque fuga delectus blanditiis quos, quam asperiores necessitatibus illum
+                    dicta assumenda eveniet distinctio eius dolores, quis porro? Laudantium, facere quia eaque enim
+                    accusamus tempore beatae consectetur ea cum quidem vitae, voluptatum magnam exercitationem?
+                </p>
+                <div class="row">
+                    <div class="col-5">
+                        <button type="button" class="btn btn-light btn-outline-dark btn-sm">Learn more>></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h2>Web Hosting</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero tempora voluptatem consequuntur
+                    harum. Eveniet corporis doloribus pariatur laboriosam veritatis iusto fuga dolore quo. Amet neque
+                    itaque accusantium praesentium sint at modi ad reprehenderit iste quasi, minima exercitationem odit
+                    dolorum, ex laudantium nostrum odio aperiam quos a! Repellendus dolores dolore incidunt!
+                </p>
+                <div class="row">
+                    <div class="col-5">
+                        <button type="button" class="btn btn-light btn-outline-dark btn-sm">Learn more>></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- random-text  -->
+    <div class="container mt-2">
+        <h1 class="display-3">Wayne Enterprises</h1>
+        <hr>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa nostrum facilis harum perspiciatis, quia quod, cumque doloribus quas porro labore qui nam expedita consequatur ad et molestias magni sit consequuntur?
+
+            <div class="dropdown ms-5 mb-5">
+                <label for="dropdownMenuButton2">Choose your Suit:</label>
+                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" id="dropdownMenuButton2" aria-expanded="false">Default</button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><button class="dropdown-item">Batsuit v8.3</button></li>
+                    <li><button class="dropdown-item">XE-Suit</button></li>
+                    <li><button class="dropdown-item">Asylum Suit</button></li>
+                </ul>
+            </div>
+
+            <div class="ms-5" id="tech">Select items to take:</div>
+            <div class="btn-group-vertical ms-1" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                <label class="btn btn-outline-dark" for="btncheck1">Grapple Hook</label>
+              
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-outline-dark" for="btncheck2">Stun Gun</label>
+              
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                <label class="btn btn-outline-dark" for="btncheck3">Batarang</label>
+              </div>
+        </p>
+    </div>
+
+
+    <!-- footer -->
+    <div style="height: 50px;" class="container bg-dark mt-2 rounded-top-2">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>
