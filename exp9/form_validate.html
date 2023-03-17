@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidate</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    
+    <fieldset>
+        <legend>Registration Form</legend>
+        <form name="myForm" novalidate>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" ng-model="username" minlength="4" maxlength="15" ng-required="true">
+            <span ng-show="myForm.username.$touched && myForm.username.$error.required"
+                style="color: orange">Username is required!</span>
+            <span ng-show="myForm.username.$error.minlength"
+                style="color: red">Minimum 3 characters required.</span>
+            <span ng-show="myForm.username.$error.maxlength"
+                style="color: red">Maximum 15 characters required.</span><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" ng-pattern="/^[A-Za-z0-9]{5,15}@[A-Za-z]+[.]{1}[a-z]{3}$/" ng-model="email" ng-required="true">
+            <span ng-show="myForm.email.$touched && myForm.email.$error.required"
+                style="color: orange">Email is required!</span>
+            <span ng-show="myForm.email.$error.pattern"
+                style="color: red">Incorrect Pattern!</span><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="pass" id="pass" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,16}$/" ng-model="pass" ng-required="true">
+            <span ng-show="myForm.pass.$touched && myForm.pass.$error.required"
+                style="color: orange">Password is necessary!</span>
+            <span ng-show="myForm.pass.$error.pattern"
+                style="color:red">Password doesn't match requirements!</span><br><br>
+            
+            <label for="password2">Confirm Password:</label>
+            <input type="password" name="pass2" id="pass2" ng-model="pass2" ng-required="true" ng-keyup="compare(pass2)">
+            <span ng-show="myForm.pass2.$touched && myForm.pass2.$error.required"
+            style="color: orange">Please confirm password!</span>
+            <span ng-show="!confirm && myForm.pass2.$dirty" 
+            style="color: red">Passwords don't match!</span><br><br>
+            
+            
+            <label for="pan">Enter Pan:</label>
+            <input type="text" name="pan" id="pan" ng-model="pan" ng-pattern="/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/" ng-required="true">
+            <span ng-show="myForm.pan.$touched && myForm.pan.$error.required"
+                style="color: orange">PAN Number is necessary!</span>
+            <span ng-show="myForm.pan.$error.pattern"
+                style="color: red">PAN doesn't match requirements!</span><br><br>
+
+            <label for="pan">Enter Aadhar:</label>
+            <input type="text" name="aadhar" id="aadhar" ng-model="aadhar" ng-pattern="/^[0-9]{12}$/" ng-required="true">
+            <span ng-show="myForm.aadhar.$touched && myForm.aadhar.$error.required"
+                style="color: orange">Aadhar is necessary!</span>
+            <span ng-show="myForm.aadhar.$error.pattern"
+                style="color: red">Aadhar doesn't match requirements!</span><br><br>
+                
+            <label for="phone">Enter Phone:</label>
+            <input type="text" name="phone" id="phone" ng-model="phone" ng-required="true" ng-pattern="/^[0-9]{10}$/">
+            <span ng-show="myForm.phone.$touched && myForm.phone.$error.required"
+                style="color: orange">Phone is necessary!</span>
+            <span ng-show="myForm.phone.$error.pattern"
+                style="color: red">Phone doesn't match requirements!</span><br><br>
+            
+
+            <button ng-click="validate()">Submit Form</button>
+            <span ng-show="valid"
+                style="color: greenyellow">Registration Successful!</span>
+            <span ng-show="invalid"
+                style="color: red">Registration ERROR!</span>
+        </form>
+    
+    </fieldset>
+    <script>
+        let app = angular.module("myApp", [])
+        let ctrl = app.controller('myCtrl', function($scope){
+            $scope.compare = function(pass2){
+                $scope.confirm = $scope.pass == pass2 ? true : false
+            }
+            $scope.valid = false
+            $scope.invalid = false
+            $scope.validate = function(){
+                var uname = ($scope.myForm.username.$error.required) && $scope.myForm.username.$error.minlength && $scope.myForm.username.$error.maxlength
+                var pass1 = ($scope.myForm.pass.$error.required) && ($scope.myForm.email.$error.pattern)
+                var pass2 = ($scope.myForm.pass2.$error.required) && (!$scope.confirm)
+                var pan = ($scope.myForm.pan.$error.required) && ($scope.myForm.pan.$error.pattern)
+                var aadhar = ($scope.myForm.aadhar.$error.required) && ($scope.myForm.aadhar.$error.pattern)
+                var phone = ($scope.myForm.phone.$error.required) && ($scope.myForm.phone.$error.pattern)
+                if(!uname && !pass1 && !pass2 && !pan && !aadhar && !phone){
+                    $scope.valid = true
+                    $scope.invalid = false
+                }else{
+                    $scope.valid = false
+                    $scope.invalid = true
+                }
+            }
+        })
+    </script>
+</body>
+</html>

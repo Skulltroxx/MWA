@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Filters</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="controller1">
+        <p>Enter word: <input type="text" name="word" id="word" ng-model="word"></p>
+        Uppercase -> <span id="1">{{ word | uppercase }}</span><br>
+        Lowercase -> <span id="2">{{ word | lowercase }}</span><br><hr>
+        <p>Enter money: <input type="number" name="money" id="money" ng-model="money"></p>
+        Currency -> <span id="3">{{ money | currency }}</span><br><hr>
+        Search Name: <input type="text" name="name" id="name" ng-model="input">
+        <div ng-repeat="x in arr | filter: input">
+            <ul>
+                <li>{{ x }}</li>
+            </ul>
+        </div><hr>
+        Names in order:
+        <div ng-repeat="x in names | orderBy">
+            <ul>
+                <li>{{ x }}</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script>
+        let app = angular.module('myApp', [])
+
+        app.controller('controller1', function($scope){
+            $scope.arr = ['Bruce Wayne', 'Robin', 'Dick Grayson', 'Raigor Stonehoof', 'Rylai', 'Selemene']
+            $scope.names = ['Vaishakh', 'Sahil', 'Aditya', 'Siddharth', 'Varun', 'Shrey', 'Advait']
+        })
+    </script>
+</body>
+</html>

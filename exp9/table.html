@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Table</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <table border="1px solid">
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first" id="first" ng-model="first"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last" id="last" ng-model="last"></td>
+            </tr>
+            <tr>
+                <td>Full Name:</td>
+                <td>{{ first + ' ' + last }}</td>
+            </tr>
+            <tr>
+                <td>Technical</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                        </tr>
+                        <tr ng-repeat="x in marks1">
+                            <td>{{ x.name }}</td>
+                            <td>{{ x.marks }}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Non-Technical</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                        </tr>
+                        <tr ng-repeat="x in marks2">
+                            <td>{{ x.name }}</td>
+                            <td>{{ x.marks }}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        const app = angular.module('myApp', [])
+        const ctrl = app.controller('myCtrl', function($scope){
+            $scope.marks1 = [
+                {name: 'DBMS', marks: 82},
+                {name: 'SPC', marks: 76},
+                {name: 'AI', marks: 67},
+                {name: 'PEE', marks: 89},
+                {name: 'BCVS', marks: 98},
+            ]
+            $scope.marks2 = [
+                {name: 'CN', marks: 82},
+                {name: 'SM', marks: 76},
+                {name: 'IS', marks: 67},
+                {name: 'FCS', marks: 89},
+                {name: 'DSA', marks: 98},
+            ]
+        })
+    </script>
+</body>
+</html>
