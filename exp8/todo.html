@@ -20,14 +20,13 @@
     <script>
         angular.module('myApp', []).controller('myCtrl', function($scope){
             $scope.items = []
-            id = 0
 
             $scope.addTodo = function(){
                 $scope.items.push($scope.todo);
             }
 
             $scope.delete = function(item){
-                i = $scope.items.indexOf(item);
+                let i = $scope.items.indexOf(item);
                 $scope.items.splice(i,1);
             }
         })
